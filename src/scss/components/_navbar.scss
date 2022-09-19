@@ -1,0 +1,54 @@
+@import '../normalize';
+@import '../variables';
+@import '../mixin';
+
+.navbar {
+    @include flex (0, center);
+    position: sticky;
+    top: 0;
+    background: rgba($color: #fff, $alpha: 0.7);
+    backdrop-filter: blur(11px);
+    z-index: 300;
+    .nav-links {
+        @include flex (0, space-between);
+        height: 56px;
+        width: 768px;
+        padding: 12px 0px;
+        @media all and (max-width:$mainMaxWidth-992) {
+            width: 665px;
+        }
+        @media all and (max-width:$mainMaxWidth-720) {
+            width: 575px;
+        }
+        @media all and (max-width:$mainMaxWidth-576) {
+            width: 435px;
+        }
+        .nav-logo {
+            a {
+                color: $mainTextColor;
+            }
+        } 
+        .Right-Links {
+            line-height: 20px;
+            height: 32px;
+            @include flex (8px, '');
+            button {
+                font-family: 'Inter SemiBold';
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                border: none;
+                background: rgba($color: #fff, $alpha: 0);;
+                padding: 6px 12px;
+                color: $mainTextColor;
+                cursor: pointer;
+                border-radius: 6px;
+                &:hover {
+                    background-color: #E2E8F0;
+                    transition: 0.8s;
+                }
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,226 @@
+@import '../normalize';
+@import '../variables';
+@import '../mixin';
+
+.frame-1 {
+    @include flex (0, center);
+    
+    .frame-content {
+        max-width: 768px;
+        margin-top: 64px;
+        .hero {
+            @include flex (48px, space-between);
+            @media all and (max-width:$mainMaxWidth-992) {
+                width: 665px;
+            }
+            @media all and (max-width:$mainMaxWidth-720) {
+                width: 575px;
+            }
+            @media all and (max-width:$mainMaxWidth-576) {
+                width: 435px;
+                @include flexColumn (0);
+                flex-direction:column-reverse;
+            }
+            .hero-text-wrapper {
+                max-width: 496px;
+                .hero-text {
+                    display: flex;
+                    gap: 12px;
+                    flex-direction: column;
+                    span {
+                        font-weight: 500;
+                        font-size: 30px;
+                        line-height: 120%;
+                    }
+                    p {
+                        font-family: 'Inter Regular';
+                        span {
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 175%;
+                        }
+                    }
+                    .social-links {
+                        @include flex (12px,'');
+                        font-family: 'Inter Regular';
+                        font-weight: 600;
+                        line-height: 20px;
+                        button {
+                            position: relative;
+                            @include flex (8px,'');
+                            border: none;
+                            background: #fff;
+                            height: 32px;
+                            border-radius: 6px;
+                            padding: 10px 12px;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: #E2E8F0;
+                                transition: 0.8s;  
+                            }
+                        }
+                        button:nth-child(1) {
+                            color: #1EA1F1;
+                        }
+                        button:nth-child(3) {
+                            color: #6B46C1;
+                        }
+                    }
+                }
+            }
+        }
+        .courses {
+            @media all and (max-width:$mainMaxWidth-992) {
+                width: 665px;
+            }
+            @media all and (max-width:$mainMaxWidth-720) {
+                width: 575px;
+            }
+            @media all and (max-width:$mainMaxWidth-576) {
+                width: 435px;
+            }
+            padding-top: 64px;
+            .courses-list {
+                padding-top: 16px;
+                @include flexColumn (24px);
+                .course{
+                    background: #EDF2F7;
+                    .course-content {
+                        @include flex (20px, space-between);
+                        padding: 16px;
+                        .course-text {
+                            div {
+                                @include flex (0, space-between);
+                                span {
+                                    font-weight: 500;
+                                    line-height: 20px;
+                                }
+                                a {
+                                    font-family: 'Inter Regular';
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                }
+                            }
+                            p:nth-child(2) {
+                                padding-top:12px ;
+                            }
+                            p {
+                                font-family: 'Inter Regular';
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 21px;
+                            }
+                            .course-text-p {
+                                padding: 12px 0;
+                                font-family: 'Inter Regular';
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 21px;
+                                color: #718096;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        .Recent-blog-post {
+            @media all and (max-width:$mainMaxWidth-992) {
+                width: 665px;
+            }
+            @media all and (max-width:$mainMaxWidth-720) {
+                width: 575px;
+            }
+            @media all and (max-width:$mainMaxWidth-576) {
+                width: 435px;
+            }
+            margin-top: 64px;
+            
+            .Recent {
+                font-size: 20px;
+                line-height: 120%;
+                margin-bottom: 32px;
+            }
+            .blog-posts { 
+                @include flexColumn (24px);
+                .blog-post {
+
+                    .post-name {
+                        @include flex (0,space-between);
+                        @media all and (max-width:$mainMaxWidth-576) {
+                            width: 435px;
+                            display: flex;
+                            align-items: flex-start;
+                            flex-direction: column;
+                        }
+                        p {
+                            padding: 0;
+                        }
+                    }
+                    p {
+                        font-family: 'Inter Regular';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 150%;
+                        color: #718096;
+                        padding-top: 12px;
+                    }
+                    span {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .Recent-videos {
+            margin-top: 64px;
+            @media all and (max-width:$mainMaxWidth-992) {
+                width: 665px;
+            }
+            @media all and (max-width:$mainMaxWidth-720) {
+                width: 575px;
+            }
+            @media all and (max-width:$mainMaxWidth-576) {
+                width: 435px;
+            }
+            .videos-grid {
+                margin-top: 32px;
+                @include flexColumn (32px);
+                .video-row {
+                    @include flex (48px,'');
+                    @media all and (max-width:$mainMaxWidth-720) {
+                        width: 575px;
+                        @include flexColumn (32px);
+                        align-items: flex-start;
+                    }
+                    @media all and (max-width:$mainMaxWidth-576) {
+                        width: 453px;
+                        @include flexColumn (32px);
+                        align-items: flex-start;
+                    }
+                    .video {
+                        .video-text {
+                            padding: 16px 0 0;
+                            span {
+                                font-family: 'Cal Sans';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 120%;
+                            }
+                            p {
+                                font-family: 'Inter Regular';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 150%;
+                                color: #718096;
+                                padding-top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

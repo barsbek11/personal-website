@@ -1,0 +1,89 @@
+@import '../normalize';
+@import '../variables';
+@import '../mixin';
+
+.content {
+    @include flex (0, center);
+    flex-direction: column;
+    .frame2 {
+        @media all and (max-width:$mainMaxWidth-992) {
+            width: 665px;
+        }
+        @media all and (max-width:$mainMaxWidth-720) {
+            width: 575px;
+        }
+        @media all and (max-width:$mainMaxWidth-576) {
+            width: 435px;
+        }
+        max-width: 768px;
+        span {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: 1px;
+            padding-bottom: 12px;
+        }
+        p {
+            font-family: 'Inter Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+        }
+    }
+    .frame3 {
+        @media all and (max-width:$mainMaxWidth-992) {
+            width: 665px;
+        }
+        @media all and (max-width:$mainMaxWidth-720) {
+            width: 575px;
+        }
+        @media all and (max-width:$mainMaxWidth-576) {
+            width: 435px;
+        }
+        width: 768px;
+        .categories {
+            margin-top: 16px;
+            .categories-list {
+                
+                @include flexColumn (6px);
+                align-items: flex-start;
+                padding-top: 48px;
+                .name {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 120%;
+                    letter-spacing: 1px;
+                    margin-bottom: 26px;
+                }
+                .tech-item {
+                    @include flex (30px, '');
+                    .tech-icons {
+                        @include wh (72px, 72px);
+                        @include flex (0, center);
+                        padding: 12px 0 12px 12px;
+                        img {
+                            @include wh (60px, 60px);
+                        }
+                    }
+                    .tech-text {
+                        span {
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 120%;
+                            letter-spacing: 0.8px;
+                        }
+                        p {
+                            font-family: 'Inter Regular';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 150%;
+                            color: #718096;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

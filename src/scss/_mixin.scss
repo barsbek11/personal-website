@@ -1,0 +1,21 @@
+@mixin flex($width: 0, $range:'') {
+    display: flex;
+    align-items: center;
+    gap: $width;
+    justify-content: $range;
+}
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin flexColumn($width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $width;
+    justify-content: center;
+}
+@mixin border ($border) {
+    border: 1px solid #dfdfdf;
+    border-radius: 3;
+}

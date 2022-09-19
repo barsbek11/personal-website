@@ -1,0 +1,10 @@
+@import './normalize' ;
+@import './components/navbar';
+@import './components/frame1';
+@import './components/footer';
+@import './components/uses';
+
+
+#app {
+    min-height: 100vh;
+}
